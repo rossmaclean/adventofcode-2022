@@ -6,7 +6,7 @@ import calorie_counting
 class TestMain(unittest.TestCase):
 
     def test_read_file_to_trimmed_array(self):
-        filename = "test_input.txt"
+        filename = "./test_input.txt"
         expected = [
             [1000, 2000, 3000],
             [4000],

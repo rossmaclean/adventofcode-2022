@@ -53,11 +53,11 @@ class TestMain(unittest.TestCase):
 
     def test_get_top_total(self):
         input = [
-            [10000],
-            [4000],
+            [7000, 8000, 9000],
             [5000, 6000],
+            [10000],
             [1000, 2000, 3000],
-            [7000, 8000, 9000]
+            [4000]
         ]
 
         expected = 45000

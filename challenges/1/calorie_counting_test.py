@@ -32,6 +32,38 @@ class TestMain(unittest.TestCase):
 
         self.assertEqual(expected, actual)
 
+    def test_sort_descending(self):
+        input = [
+            [10000],
+            [4000],
+            [5000, 6000],
+            [1000, 2000, 3000],
+            [7000, 8000, 9000]
+        ]
+
+        expected = [
+            [7000, 8000, 9000],
+            [5000, 6000],
+            [10000],
+            [1000, 2000, 3000],
+            [4000]
+        ]
+
+        self.assertEqual(expected, calorie_counting.sort_descending(input))
+
+    def test_get_top_total(self):
+        input = [
+            [10000],
+            [4000],
+            [5000, 6000],
+            [1000, 2000, 3000],
+            [7000, 8000, 9000]
+        ]
+
+        expected = 45000
+
+        self.assertEqual(expected, calorie_counting.get_top_total(input, 3))
+
 
 if __name__ == '__main__':
     unittest.main()

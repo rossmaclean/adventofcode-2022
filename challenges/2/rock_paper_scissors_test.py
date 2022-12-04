@@ -12,7 +12,7 @@ class TestMain(unittest.TestCase):
             ["B", "X"],
             ["C", "Z"]
         ]
-        filename = os.path.realpath("test_input.txt")
+        filename = "./test_input.txt"
 
         self.assertEqual(expected,
                          rock_paper_scissors.read_file_to_array(filename))
@@ -43,7 +43,7 @@ class TestMain(unittest.TestCase):
 
     def test_get_my_score_for_round_full_strat_real_input(self):
         input = rock_paper_scissors.read_file_to_array(
-            os.path.realpath("input.txt"))
+            os.path.realpath("./input.txt"))
 
         self.assertEqual(12526,
                          rock_paper_scissors.get_my_score_for_rounds_full_strat(
